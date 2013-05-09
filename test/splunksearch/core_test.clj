@@ -1,6 +1,6 @@
-(ns simple.core-test
+(ns splunksearch.core-test
   (:use clojure.test
-        simple.core))
+        splunksearch.core))
 
 (deftest a-test
   (testing "FIXME, I fail."

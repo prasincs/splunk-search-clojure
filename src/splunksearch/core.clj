@@ -1,4 +1,4 @@
-(ns simple.core
+(ns splunksearch.core
   (:require [clojure.java.io :refer :all])
   (:import (com.splunk Service ServiceArgs Args ResultsReaderJson ResultsReaderCsv ResultsReaderXml Event))
   (:import (com.splunk Command))
