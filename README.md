@@ -1,4 +1,4 @@
-# splunksearch
+# Splunk Search in Clojure
 
 A Clojure command line program that enables simple search access to a
 splunk utility.
