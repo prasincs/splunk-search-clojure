@@ -1,7 +1,7 @@
 # Splunk Search in Clojure
 
 A Clojure command line program that enables simple search access to a
-splunk utility.
+Splunk server endpoint.
 
 ## Usage
 
@@ -20,7 +20,7 @@ Once all that's done, *and* you've got an instance of Splunk up at
 running, *and* you've successfully configure your .splunkrc file, you
 can try:
 
-lein run 'search <your search here>'
+lein run 'search [your search here]'
 
 ## License
 
