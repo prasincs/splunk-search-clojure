@@ -399,14 +399,14 @@ code.  But it works!
 
 @ 
 
-And the entire program ends up looking like
+And the entire program ends up looking like this:
 
 <<core.clj>>=
 <<create the namespace>>
 
 <<parse command arguments>>
 
-<<build the argument map>>
+<<build the arguments map>>
 
 <<build the queryargs object>>
 
@@ -431,7 +431,7 @@ And that's it.
 
 You can now run the program with lein:
 
-<<command_line>>=
+<<command line>>=
 lein run --output_mode csv "search magnitude > 4.5"
 @ 
 
@@ -447,6 +447,12 @@ Lisp that actually, you know, had \textit{real world} applicability,
 and that should have done the things I would have expected of a LISP.
 That fantasy LISP was pretty close to the real deal; it only took me a
 few hours of \texttt{lein run} sessions to knock out all the bugs.
+
+\subsection{Index}
+
+\nowebchunks
+
+\end{document}
 
 
 
