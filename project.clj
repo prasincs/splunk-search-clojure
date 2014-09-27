@@ -7,7 +7,7 @@
   :dependencies [
                  [org.clojure/clojure "1.5.0"]
                  [commons-cli/commons-cli "1.2"]
-                 [com.google.code.gson/gson "2.1"]
+                 [cheshire "5.3.1"]
                  [net.sf.opencsv/opencsv "2.3"]
                  [com.splunk/splunk "1.3.1.0"]]
   :source-paths ["src/clojure"]

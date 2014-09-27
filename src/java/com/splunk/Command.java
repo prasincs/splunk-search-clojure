@@ -45,8 +45,8 @@ public class Command {
         defaultValues.put("host", "localhost");
         defaultValues.put("port", 8089);
     }
-    
-    Command(String appName) { 
+
+    Command(String appName) {
         this.appName = appName;
     }
 
@@ -60,7 +60,7 @@ public class Command {
 
     public static void error(String message, Object... args) {
         System.err.format("Error: %s\n", String.format(message, args));
-        System.exit(2);
+        throw new RuntimeException(message);
     }
 
     public Options getRules() {
@@ -107,7 +107,7 @@ public class Command {
     // Load a file of options and arguments
     public Command load(String path) {
         ArrayList<String> argList = new ArrayList<String>();
-        
+
         try {
             FileReader fileReader = new FileReader(path);
             try {
@@ -117,10 +117,10 @@ public class Command {
                     line = reader.readLine();
                     if (line == null)
                         break;
-                    if (line.startsWith("#")) 
+                    if (line.startsWith("#"))
                         continue;
                     line = line.trim();
-                    if (line.length() == 0) 
+                    if (line.length() == 0)
                         continue;
                     if (!line.startsWith("-"))
                         line = "--" + line;
@@ -157,7 +157,7 @@ public class Command {
         for (Option option : cmdline.getOptions()) {
             String name = option.getLongOpt();
             Object value = option.getValue();
-            
+
             // Figure out the type of the option and convert the value.
             if (!option.hasArg()) {
                 // If it has no arg, then its implicitly boolean and presence
@@ -168,7 +168,7 @@ public class Command {
                 Class type = (Class)option.getType();
                 if (type == null) {
                     // Null implies String, no conversion necessary
-                } 
+                }
                 else if (type == Integer.class) {
                     value = Integer.parseInt((String)value);
                 }
@@ -230,4 +230,3 @@ public class Command {
         return this;
     }
 }
-
